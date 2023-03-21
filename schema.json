@@ -1,0 +1,97 @@
+{
+    "sheets": {
+        "animalpopulation": {
+            "animal": "varchar",
+            "month": "varchar",
+            "shelter": "varchar",
+            "amount": "integer"
+    },
+    "dogswalked": {
+        "month": "varchar",
+        "shelter": "varchar",
+        "amount": "integer"
+},
+"outcomesforanimals": {
+    "outcome": "varchar",
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer"
+},
+"adoptions": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer",
+    "animal": "varchar"
+},
+"animalssenttofoster": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer",
+    "animal": "varchar"
+},
+"intakebytype": {
+    "intaketype": "varchar",
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer"
+},
+"intakebyanimal": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer",
+    "animal": "varchar"
+},
+"euthanasia": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer",
+    "animal": "varchar"
+},
+"liveintake": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer",
+    "animal": "varchar"
+},
+"nonliveoutcome": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer",
+    "animal": "varchar",
+    "outcome": "varchar"
+},
+"saverate": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "double",
+    "animal": "varchar"
+},
+"numberofvolshiftsworked": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer"
+},
+"numberofuniqvol": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer"
+},
+"numberofvolhours": {
+    "month": "varchar",
+    "shelter": "varchar",
+    "amount": "integer"
+},
+"spayneutercerts": {
+    "type": "varchar",
+    "month": "varchar",
+    "amount": "integer",
+    "issued_or_redeemed": "varchar"
+},
+"spayneutersurgeries": {
+    "animal": "varchar",
+    "month": "varchar",
+    "amount": "integer",
+    "shelter": "varchar"
+}
+}
+}
