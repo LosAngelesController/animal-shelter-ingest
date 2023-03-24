@@ -63,7 +63,7 @@
 "saverate": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "double",
+    "amount": "decimal",
     "animal": "varchar"
 },
 "numberofvolshiftsworked": {

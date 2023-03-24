@@ -225,11 +225,11 @@ async function fetchSheet() {
 
 fetchSheet();
 
-//run fetchSheetFunction once every 30 seconds
+//run fetchSheetFunction once every 69 seconds
 
 setInterval(() => {
     fetchSheet();
-}, 30000);
+}, 69000);
 
 }
 
