@@ -4,59 +4,59 @@
             "animal": "varchar",
             "month": "varchar",
             "shelter": "varchar",
-            "amount": "integer"
+            "amount": "decimal"
     },
     "dogswalked": {
         "month": "varchar",
         "shelter": "varchar",
-        "amount": "integer"
+        "amount": "decimal"
 },
 "outcomesforanimals": {
     "outcome": "varchar",
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer"
+    "amount": "decimal"
 },
 "adoptions": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "animal": "varchar"
 },
 "animalssenttofoster": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "animal": "varchar"
 },
 "intakebytype": {
     "intaketype": "varchar",
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer"
+    "amount": "decimal"
 },
 "intakebyanimal": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "animal": "varchar"
 },
 "euthanasia": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "animal": "varchar"
 },
 "liveintake": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "animal": "varchar"
 },
 "nonliveoutcome": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "animal": "varchar",
     "outcome": "varchar"
 },
@@ -69,28 +69,28 @@
 "numberofvolshiftsworked": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer"
+    "amount": "decimal"
 },
 "numberofuniqvol": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer"
+    "amount": "decimal"
 },
 "numberofvolhours": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "integer"
+    "amount": "decimal"
 },
 "spayneutercerts": {
     "type": "varchar",
     "month": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "issued_or_redeemed": "varchar"
 },
 "spayneutersurgeries": {
     "animal": "varchar",
     "month": "varchar",
-    "amount": "integer",
+    "amount": "decimal",
     "shelter": "varchar"
 }
 }
