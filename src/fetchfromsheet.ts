@@ -197,7 +197,10 @@ async function fetchSheet() {
                rows.forEach((row) => {
 
                    const valuesarray = columns.map((x) => row[x]);
-               
+              
+                   console.log('columns', `(${columns.join(', ')}) VALUES (${valuesarray.map((x, n) => `$${n + 1}`)})`);
+                console.log('values', valuesarray)
+
                    arrayofinsert.push(pgclient.query(`INSERT INTO ${sheetname}new (${columns.join(', ')}) VALUES (${valuesarray.map((x, n) => `$${n + 1}`).join(', ')})`
                    , valuesarray));
 
