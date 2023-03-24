@@ -4,93 +4,93 @@
             "animal": "varchar",
             "month": "varchar",
             "shelter": "varchar",
-            "amount": "decimal"
+            "amount": "float8"
     },
     "dogswalked": {
         "month": "varchar",
         "shelter": "varchar",
-        "amount": "decimal"
+        "amount": "float8"
 },
 "outcomesforanimals": {
     "outcome": "varchar",
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal"
+    "amount": "float8"
 },
 "adoptions": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "animal": "varchar"
 },
 "animalssenttofoster": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "animal": "varchar"
 },
 "intakebytype": {
     "intaketype": "varchar",
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal"
+    "amount": "float8"
 },
 "intakebyanimal": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "animal": "varchar"
 },
 "euthanasia": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "animal": "varchar"
 },
 "liveintake": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "animal": "varchar"
 },
 "nonliveoutcome": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "animal": "varchar",
     "outcome": "varchar"
 },
 "saverate": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "animal": "varchar"
 },
 "numberofvolshiftsworked": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal"
+    "amount": "float8"
 },
 "numberofuniqvol": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal"
+    "amount": "float8"
 },
 "numberofvolhours": {
     "month": "varchar",
     "shelter": "varchar",
-    "amount": "decimal"
+    "amount": "float8"
 },
 "spayneutercerts": {
     "type": "varchar",
     "month": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "issued_or_redeemed": "varchar"
 },
 "spayneutersurgeries": {
     "animal": "varchar",
     "month": "varchar",
-    "amount": "decimal",
+    "amount": "float8",
     "shelter": "varchar"
 }
 }
