@@ -188,7 +188,7 @@ async function fetchSheet() {
 
                 const dropthenewtable = `DROP TABLE IF EXISTS ${sheetname}new;`;
 
-                await pgclient.query(dropthenewtable).then((dropthenewtable) => {
+                await pgclient.query(dropthenewtable).then(async (dropthenewtable) => {
                   const createquery = `CREATE TABLE if not exists ${sheetname}new (
                     ${columnforthistable}
                 );`;
