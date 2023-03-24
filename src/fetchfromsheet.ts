@@ -190,28 +190,30 @@ async function fetchSheet() {
                     ${columnforthistable}
                 );`;
 
-                await pgclient.query(createquery);
-                
-               //make import statements
+                await pgclient.query(createquery).then((tablemade) => {
+                   //make import statements
                const arrayofinsert:string[] = [];
 
-                rows.forEach((row) => {
+               rows.forEach((row) => {
 
-                    const valuesarray = columns.map((x) => row[x]);
-                
-                    arrayofinsert.push(pgclient.query(`INSERT INTO ${sheetname}new (${columns.join(', ')}) VALUES (${valuesarray.map((x, n) => `$${n}`).join(', ')})`
-                    , valuesarray));
+                   const valuesarray = columns.map((x) => row[x]);
+               
+                   arrayofinsert.push(pgclient.query(`INSERT INTO ${sheetname}new (${columns.join(', ')}) VALUES (${valuesarray.map((x, n) => `$${n}`).join(', ')})`
+                   , valuesarray));
 
+               });
+               
+               await Promise.all(arrayofinsert);
+
+               //rename table
+               await pgclient.query(`BEGIN; DROP TABLE IF EXISTS ${sheetname}; ALTER TABLE ${sheetname}new RENAME TO ${sheetname}; COMMIT;`);
+
+               //update hash table
+               await pgclient.query(`INSERT INTO animalhashinfo (sheetname, hash) VALUES ($1, $2) ON CONFLICT (sheetname) DO UPDATE SET hash = $2;`, [sheetname, hash]);
+               
                 });
                 
-                await Promise.all(arrayofinsert);
-
-                //rename table
-                await pgclient.query(`BEGIN; DROP TABLE IF EXISTS ${sheetname}; ALTER TABLE ${sheetname}new RENAME TO ${sheetname}; COMMIT;`);
-
-                //update hash table
-                await pgclient.query(`INSERT INTO animalhashinfo (sheetname, hash) VALUES ($1, $2) ON CONFLICT (sheetname) DO UPDATE SET hash = $2;`, [sheetname, hash]);
-                
+              
 
             }
         }
