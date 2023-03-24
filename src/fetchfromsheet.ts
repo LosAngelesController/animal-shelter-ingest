@@ -189,6 +189,8 @@ async function fetchSheet() {
                 const createquery = `CREATE TABLE if not exists ${sheetname}new (
                     ${columnforthistable}
                 );`;
+
+                await pgclient.query(createquery);
                 
                //make import statements
                const arrayofinsert:string[] = [];
