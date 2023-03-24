@@ -190,7 +190,7 @@ async function fetchSheet() {
                     ${columnforthistable}
                 );`;
 
-                await pgclient.query(createquery).then((tablemade) => {
+                await pgclient.query(createquery).then(async (tablemade) => {
                    //make import statements
                const arrayofinsert:string[] = [];
 
