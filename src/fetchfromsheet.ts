@@ -186,7 +186,10 @@ async function fetchSheet() {
 
                 const columns = Object.keys(schema);
 
-                const createquery = `CREATE TABLE if not exists ${sheetname}new (
+                const dropthenewtable = `DROP TABLE IF EXISTS ${sheetname}new;`;
+
+                await pgclient.query(dropthenewtable).then((dropthenewtable) => {
+                  const createquery = `CREATE TABLE if not exists ${sheetname}new (
                     ${columnforthistable}
                 );`;
 
@@ -215,6 +218,9 @@ async function fetchSheet() {
                await pgclient.query(`INSERT INTO animalhashinfo (sheetname, hash) VALUES ($1, $2) ON CONFLICT (sheetname) DO UPDATE SET hash = $2;`, [sheetname, hash]);
                
                 });
+                });
+
+                
                 
               
 
