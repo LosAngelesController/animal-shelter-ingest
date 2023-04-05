@@ -1,6 +1,6 @@
 module.exports = {
     apps : [{
-      name: "adora",
+      name: "animal-ingest",
       script: "./dist/fetchfromsheet.js"
     }]
   }
